@@ -13,7 +13,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class QuoteRepository {
-	private static final String BASE_URL = "https://api.myjson.com";
+	private static final String BASE_URL = "https://quotes.rest";
 	
 	private QuoteApiService mQuoteApiService;
 	
