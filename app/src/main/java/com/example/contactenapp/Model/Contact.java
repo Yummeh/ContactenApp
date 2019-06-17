@@ -1,7 +1,11 @@
 package com.example.contactenapp.Model;
 
 import android.graphics.Bitmap;
+import android.media.Image;
+import android.net.Uri;
 import android.telephony.PhoneNumberUtils;
+
+import java.io.File;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
@@ -22,8 +26,15 @@ public class Contact {
 	@ColumnInfo(name = "phoneNumber")
 	private String phoneNumber;
 	
-	@ColumnInfo(name = "profilePhoto")
-	private Bitmap profilePhoto;
+	@ColumnInfo(name = "profilePictureUri")
+	private String profilePictureUri;
+	
+	public Contact(String name, String email, String phoneNumber, String profilePictureUri) {
+		this.name = name;
+		this.email = email;
+		this.phoneNumber = phoneNumber;
+		this.profilePictureUri = profilePictureUri;
+	}
 	
 	public int getId() {
 		return id;
@@ -57,19 +68,11 @@ public class Contact {
 		this.phoneNumber = phoneNumber;
 	}
 	
-	public Bitmap getProfilePhoto() {
-		return profilePhoto;
+	public String getProfilePictureUri() {
+		return profilePictureUri;
 	}
 	
-	public void setProfilePhoto(Bitmap profilePhoto) {
-		this.profilePhoto = profilePhoto;
-	}
-	
-	public Contact(int id, String name, String email, String phoneNumber, Bitmap profilePhoto) {
-		this.id = id;
-		this.name = name;
-		this.email = email;
-		this.phoneNumber = phoneNumber;
-		this.profilePhoto = profilePhoto;
+	public void setProfilePictureUri(String profilePictureUri) {
+		this.profilePictureUri = profilePictureUri;
 	}
 }

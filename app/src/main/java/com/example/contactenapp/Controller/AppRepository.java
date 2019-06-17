@@ -1,12 +1,16 @@
 package com.example.contactenapp.Controller;
 
-import android.arch.lifecycle.LiveData;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+
 import android.content.Context;
+import android.util.Log;
 
 import com.example.contactenapp.Model.AppDataBase;
 import com.example.contactenapp.Model.Contact;
 import com.example.contactenapp.Model.ContactDao;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
@@ -21,10 +25,10 @@ public class AppRepository {
 	public AppRepository(Context context) {
 		mAppDataBase = AppDataBase.getDataBase(context);
 		mContactDao = mAppDataBase.contactDao();
-		mContacts = mContactDao.getAllContacts();   
+		mContacts = mContactDao.getAllContacts();
 	}
 	
-	public LiveData<List<Contact>> getAllProducts() {
+	public LiveData<List<Contact>> getAllContacts() {
 		return mContacts;
 	}
 	

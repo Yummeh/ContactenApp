@@ -1,5 +1,14 @@
 <resources>
     <string name="app_name">ContactenApp</string>
-    <string name="phoneNumber">Phone number:</string>
+    <string name="phoneNumber">Phone number</string>
     <string name="email">Email</string>
+    <string name="addContact">New contact</string>
+    <string name="name">Name</string>
+    <string name="search_here">Search here...</string>
+    <string name="ralph_de_horde">Ralph de Horde</string>
+    <string name="quote_placeholder">Could not find quote</string>
+    <string name="motivatie">Het lijkt me leuk om bij Social Brothers stage te lopen. Ik heb kennis van Android Studio, de material design en ik ben gemotiveerd om meer te leren over het ontwikkelen van (Android) apps. Ik heb al een half jaartje bij Social Brothers rondgelopen, het is er erg gezellig en het lijkt me vooral leerzaam om bij jullie apps te ontwikkelen. </string>
+    <string name="change">Change</string>
+    <string name="contact_info">Contact info</string>
+    <string name="noApi">Could not reach api, possibly reached maximum of 10 calls per hour.</string>
 </resources>

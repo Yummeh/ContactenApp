@@ -1,6 +1,6 @@
 package com.example.contactenapp.Model;
 
-import android.arch.lifecycle.LiveData;
+import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ import androidx.room.Update;
 @Dao
 public interface ContactDao {
 	
-	@Query("SELECT * FROM contacts")
+	@Query("SELECT * FROM contacts ORDER BY name")
 	LiveData<List<Contact>> getAllContacts();
 	
 	@Insert
